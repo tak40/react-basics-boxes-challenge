@@ -83,9 +83,11 @@ const squareElements = squares.map(function(square) {
 
 ## Step 2: Dynamic Styling with Ternary Operator
 
-Use a ternary operator to dynamically change the styling of the boxes based on their `on` state.
+In this step, we apply a dynamic styling based on the `on` state of each box. This is done by using a ternary operator within the map function.
 
-- Use a ternary operator within the `map` method to set the `backgroundColor` of each box based on whether their `id` is even or odd.
+![Step 2 Result](./public/step2.png)
+
+The code for dynamically styling the boxes is as follows:
 
 ### Code Example for Step 2
 
