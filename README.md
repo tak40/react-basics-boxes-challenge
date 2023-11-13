@@ -85,6 +85,22 @@ const squareElements = squares.map(function(square) {
 
 Use a ternary operator to dynamically change the styling of the boxes based on their `on` state.
 
+- Use a ternary operator within the `map` method to set the `backgroundColor` of each box based on whether their `id` is even or odd.
+
+### Code Example for Step 2
+
+Here's how you dynamically apply styles to the boxes using a ternary operator within the map function:
+
+```jsx
+const squareElements = squares.map(square => {
+    const styles = {
+        backgroundColor: square.id % 2 === 0 ? 'red' : 'white',
+    }
+
+    return <div key={square.id} className="box" style={styles}></div>
+})
+```
+
 ## Step 3: Create Box Component
 
 Extract box rendering into a separate `Box` component and pass down the necessary props.
