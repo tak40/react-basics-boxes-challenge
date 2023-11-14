@@ -207,7 +207,29 @@ In the App component, the toggle function is defined and then passed to each Box
 
 ## Step 6: Update Application State with Traditional Loop
 
-Implement a traditional for-loop within the state setter function to update the state of a clicked box.
+In this step, we enhance the toggle functionality in our application to change the state of the boxes using a traditional loop method. The goal is to update the `on` state of the box that is clicked.
+
+Here's how we've implemented the toggle function:
+
+```jsx
+function toggle(id) {
+    setSquares(prevSquares => {
+        const updatedSquaresArray = []
+        for (let i = 0; i < prevSquares.length; i++) {
+            const currentSquare = prevSquares[i]
+            if (currentSquare.id === id) {
+                updatedSquaresArray.push({
+                    ...currentSquare,
+                    on: !currentSquare.on, // Toggle the on state
+                })
+            } else {
+                updatedSquaresArray.push(currentSquare)
+            }
+        }
+        return updatedSquaresArray // Don't forget to return the new state array
+    })
+}
+```
 
 ## Step 7: Refactor State Update with Declarative Map Method
 
