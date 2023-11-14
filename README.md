@@ -233,7 +233,19 @@ function toggle(id) {
 
 ## Step 7: Refactor State Update with Declarative Map Method
 
-Refine the state update function by replacing the traditional loop with the `.map()` method for more declarative syntax and readability.
+Refactoring the toggle function to use the `.map()` method enhances the readability and declarativeness of our code. Here's how the updated toggle function looks:
+
+```jsx
+function toggle(id) {
+    setSquares(prevSquares => prevSquares.map(square => 
+        square.id === id ? { ...square, on: !square.on } : square
+    ));
+}
+```
+
+This concise implementation iterates over the array of squares, and for each square, it checks if the id matches. If it does, a new object is created with the on property toggled. Otherwise, the square is returned as is. This not only makes the code easier to understand but also aligns with functional programming best practices.
+
+
 
 ## Styling Improvements
 
