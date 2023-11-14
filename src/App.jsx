@@ -7,11 +7,13 @@ import Box from './Box'
 function App() {
     const [squares, setSquares] = useState(boxes)
 
-  const squareElements = squares.map(square => <Box key={square.id} on={square.on} />)
+    function toggle(id) {
+        console.log('clicked!')
+    }
 
-    // const squareElements = squares.map(function(square) {
-    //   return <div key={square.id} className='box'></div>
-    // })
+    const squareElements = squares.map(square => (
+        <Box key={square.id} id={square.id} on={square.on} toggle={toggle} />
+    ))
 
     return (
         <main>

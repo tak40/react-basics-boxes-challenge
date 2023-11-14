@@ -154,9 +154,56 @@ function Box(props) {
 }
 ```
 
-### Step 5: Lift State Up to App Component
 
-Move the state management to the parent `App` component to control the state of all boxes collectively.
+## Step 5: Lifting State Up and Event Handling
+
+In React, data is passed down from parent to child components via props, and events are communicated up from children to parents through functions passed as props.
+
+### Understanding Data Flow in React
+
+React's unidirectional data flow means that:
+
+- **Props Down**: Data is passed down from parent to child components through props. Children can use these props but cannot change them.
+- **Events Up**: When an event occurs in a child component, such as a user clicking a box, the child notifies the parent by calling a function passed down via props.
+- **State Updates in Parent**: The parent component, which owns the state, updates the state. The new state is passed down to the children, causing the UI to re-render with the updated state.
+
+### Implementing Click Events with Arrow Functions
+
+For a child component to communicate an event to a parent, we use arrow functions to pass additional parameters, such as an item's id. Here's how we handle a click event in a child component and pass the event up to the parent component to update the state:
+
+```jsx
+// In the child component (Box.js)
+<div className="box" style={styles} onClick={() => props.toggle(props.id)}></div>
+```
+
+The arrow function `() => props.toggle(props.id)` ensures that the toggle function is not called immediately but instead when the click event occurs. This allows us to pass the id of the clicked box up to the toggle function in the parent component.
+
+### Code Example for Step 5
+
+Here's how we lifted the state up to the App component and passed down the toggle function to the Box component:
+
+```jsx
+// In the parent component (App.js)
+const [squares, setSquares] = useState(boxes);
+
+function toggle(id) {
+    // Logic to update the state based on the clicked box's id
+}
+
+const squareElements = squares.map(square => (
+    <Box key={square.id} id={square.id} on={square.on} toggle={toggle} />
+));
+
+return (
+    <main>
+        <h1>Scrimba React Basics: Boxes Challenge</h1>
+        {squareElements}
+    </main>
+);
+```
+
+In the App component, the toggle function is defined and then passed to each Box component. When a box is clicked, the toggle function is invoked with the correct id, allowing the App component to update its state accordingly.
+
 
 ## Step 6: Update Application State with Traditional Loop
 
