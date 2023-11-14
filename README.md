@@ -131,7 +131,28 @@ function Box(props) {
 
 ## Step 4: Local State for Box Component
 
-Manage each box's on/off state locally within the `Box` component with a state hook.
+In this step, we added local state management to the `Box` component. We utilized the `useState` hook to handle the `on` state, which determines whether the box is in its "on" or "off" state.
+
+Here's how we implemented the toggle functionality:
+
+```jsx
+// Box component with local state and toggle function
+function Box(props) {
+    const [on, setOn] = React.useState(props.on)
+
+    const styles = {
+        backgroundColor: on ? '#222222' : 'transparent',
+    }
+
+    function toggle() {
+        setOn(prevOn => !prevOn)
+    }
+
+    return (
+        <div className="box" style={styles} onClick={toggle}></div>
+    )
+}
+```
 
 ### Step 5: Lift State Up to App Component
 
