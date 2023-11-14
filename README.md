@@ -105,7 +105,29 @@ const squareElements = squares.map(square => {
 
 ## Step 3: Create Box Component
 
-Extract box rendering into a separate `Box` component and pass down the necessary props.
+For this step, we refactored our application to include a `Box` component. Each box's appearance is determined by its `on` property, which is passed down as a prop from the `App` component.
+
+The `Box` component uses the `on` prop to set the `backgroundColor` dynamically.
+
+![Step 3 Result](./public/step3.png)
+
+```jsx
+// App component
+const squareElements = squares.map(square => <Box key={square.id} on={square.on} />)
+```
+
+```jsx
+// Box component
+function Box(props) {
+    const styles = {
+        backgroundColor: props.on ? '#222222' : 'transparent',
+    }
+    return (
+        <div className="box" style={styles}></div>
+    )
+}
+```
+
 
 ## Step 4: Local State for Box Component
 
