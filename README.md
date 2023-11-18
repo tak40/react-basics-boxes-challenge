@@ -1,33 +1,38 @@
 # React Basics: Boxes Challenge
 
-This project is based on Scrimba's React Basics tutorial. It's a simple web application featuring six boxes where clicking a box flips its color, showcasing the fundamental concepts of React state management and component interaction.
-
-- **Build a meme generator (this section includes the boxes challenge):** [Scrimba React Basics](https://scrimba.com/playlist/pkGQkh3)
-- **Boxes challenge:** [Boxes Challenge Part 1](https://scrimba.com/learn/frontend/boxes-challenge-part-1-co4ff4b9f8504c9a03077bf2c)
-
-
 ## Project Overview
 
-The Boxes Challenge is designed to help new developers get hands-on experience with the core concepts of React, including components, state, props, and event handling. The application consists of six interactive boxes, where a click event triggers a change in the visual state of each box, toggling its color between two states.
+This project, based on Scrimba's React Basics tutorial, features a web application with six interactive boxes. Clicking on a box changes its color, demonstrating React's state management and how components interact. Check out the [Comprehensive Project Guide](#comprehensive-project-guide-react-basics-boxes-challenge) below for detailed steps, from the setup to more advanced concepts.
 
-For a detailed guide through the project steps, refer to the [Comprehensive Project Guide](#comprehensive-project-guide-react-basics-boxes-challenge) section below.
+**See it in Action:** [React Basics Boxes Challenge on Netlify](https://react-basics-boxes-challenge.netlify.app/)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ad91a721-f7ef-4d35-b949-9991964f3280/deploy-status)](https://app.netlify.com/sites/react-basics-boxes-challenge/deploys)
+
+![React Basics Boxes Challenge](./public/final.png)
+
+Learn from the original tutorial:
+- **Start your React journey here - the foundational tutorial:** [Scrimba React Basics](https://scrimba.com/playlist/pkGQkh3)
+- **See the tutorial for the Boxes Challenge, which inspired this project:** [Part 1 on Scrimba](https://scrimba.com/learn/frontend/boxes-challenge-part-1-co4ff4b9f8504c9a03077bf2c)
+
 
 ---
 
 # Comprehensive Project Guide: React Basics - Boxes Challenge
 
-This guide provides a step-by-step overview of the React Boxes Challenge. Each step outlines a key part of the project, from initial setup to advanced state management and styling. Click on the links to navigate to the detailed issues for each step.
+This guide takes you through the React Boxes Challenge step by step. Each section helps you understand a part of the project, from the very basics to more complex parts like state management and styling. Click the links to go to a detailed explanation for each step.
 
 ## Table of Contents
 
-1. [Initialize state with boxes array data](https://github.com/tak40/react-basics-boxes-challenge/issues/1)
-2. [Apply dynamic styling based on `on` state](https://github.com/tak40/react-basics-boxes-challenge/issues/2)
-3. [Componentize box and pass `on` prop](https://github.com/tak40/react-basics-boxes-challenge/issues/3)
-4. [Implement local state for individual box toggle](https://github.com/tak40/react-basics-boxes-challenge/issues/4)
-5. [Lift state up to manage unified application state](https://github.com/tak40/react-basics-boxes-challenge/issues/5)
-6. [Update state using a traditional loop method](https://github.com/tak40/react-basics-boxes-challenge/issues/6)
-7. [Refactor state update to use declarative `.map()` method](https://github.com/tak40/react-basics-boxes-challenge/issues/7)
-8. [Enhance box styling for better UI](https://github.com/tak40/react-basics-boxes-challenge/issues/8)
+- [Project Overview](#project-overview)
+- [Step 1: Initialize State with Boxes Data](#step-1-initialize-state-with-boxes-data)
+- [Step 2: Dynamic Styling with Ternary Operator](#step-2-dynamic-styling-with-ternary-operator)
+- [Step 3: Create Box Component](#step-3-create-box-component)
+- [Step 4: Local State for Box Component](#step-4-local-state-for-box-component)
+- [Step 5: Lifting State Up and Event Handling](#step-5-lifting-state-up-and-event-handling)
+- [Step 6: Update Application State with Traditional Loop](#step-6-update-application-state-with-traditional-loop)
+- [Step 7: Refactor State Update with Declarative Map Method](#step-7-refactor-state-update-with-declarative-map-method)
+- [Styling Improvements](#styling-improvements)
+- [React + Vite](#react--vite)
 
 ---
 
