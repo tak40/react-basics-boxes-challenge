@@ -168,7 +168,7 @@ This process of creating a dedicated `Box` component not only makes our code mor
 
 With our `Box` components operational, we begin by managing state locally within each. This allows each `Box` to operate independently, an ideal approach for components that don't share state or need to communicate with each other.
 
-![Local State Visualization](./local-state.png)
+![Local State Visualization](./public/local-state.png)
 
 Local state is perfect for self-contained components. However, when multiple components interact or share state, managing several local states can lead to challenges. To address this, we consider lifting state up to streamline state management across the application.
 
@@ -199,7 +199,7 @@ As our application scales, we confront challenges that require a more centralize
 
 ### Unifying State with a Single Source of Truth
 
-![Unified State Visualization](./unified-state.png)
+![Unified State Visualization](./public/unified-state.png)
 
 By moving state upwards, we create a single source of truth for our application in the `App` component. This unified state is then passed down to child components through props, ensuring all parts of our application are synchronized.
 
